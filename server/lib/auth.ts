@@ -1,5 +1,5 @@
 import 'dotenv'
-import prisma from "./prisma";
+import prisma from "./prisma.js";
 
 const trustedOrigins = process.env.TRUSTED_ORIGINS?.split(",") || [];
 

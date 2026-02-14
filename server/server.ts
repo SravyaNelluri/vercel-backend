@@ -1,11 +1,11 @@
 import express, { Request, Response } from 'express';
 import 'dotenv/config';
 import cors from 'cors';    
-import { getAuth } from './lib/auth';
-import userRouter from './routes/userRouters';
-import projectRouter from './routes/projectRoutes';
-import testRouter from './routes/testRoutes';
-import { stripeWebhook } from './controllers/stripeWebhook';
+import { getAuth } from './lib/auth.js';
+import userRouter from './routes/userRouters.js';
+import projectRouter from './routes/projectRoutes.js';
+import testRouter from './routes/testRoutes.js';
+import { stripeWebhook } from './controllers/stripeWebhook.js';
 
 // Log any crashes instead of silently exiting
 process.on('unhandledRejection', (reason) => {
