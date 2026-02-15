@@ -5,16 +5,23 @@
         "moduleResolution": "node",
         "outDir": "./dist",
         "rootDir": "./",
-        "strict": true,
+        "strict": false,
         "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "resolveJsonModule": true
+        "forceConsistentCasingInFileNames": false,
+        "resolveJsonModule": true,
+        "noEmit": false
+    },
+    "ts-node": {
+        "esm": false,
+        "transpileOnly": true
     },
     "include": [
         "./**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "dist"
     ]
 }
