@@ -1,7 +1,14 @@
-import 'dotenv'
 import prisma from "./prisma.js";
 
 const trustedOrigins = process.env.TRUSTED_ORIGINS?.split(",") || [];
+
+// Validate required env vars
+if (!process.env.BETTER_AUTH_URL) {
+  console.error('[auth] ERROR: BETTER_AUTH_URL not set');
+}
+if (!process.env.BETTER_AUTH_SECRET) {
+  console.error('[auth] ERROR: BETTER_AUTH_SECRET not set');
+}
 
 let authPromise: Promise<ReturnType<typeof import("better-auth")["betterAuth"]>> | null = null;
 
