@@ -1,4 +1,4 @@
-import prisma from "./prisma.js";
+import prisma from "./prisma";
 
 const trustedOrigins = process.env.TRUSTED_ORIGINS?.split(",") || [];
 

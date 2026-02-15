@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
-import prisma from '../lib/prisma.js';
-import openai from '../configs/openai.js';
+import prisma from '../lib/prisma';
+import openai from '../configs/openai';
 import Stripe from 'stripe';
 // Single model (configure via .env). Default to a broadly available tier.
 const MODEL = process.env.AI_MODEL || 'openai/gpt-4o-mini';

@@ -1,5 +1,5 @@
-import  prisma from '../lib/prisma.js';
-import openai from '../configs/openai.js';
+import  prisma from '../lib/prisma';
+import openai from '../configs/openai';
 import { Request, Response } from 'express';
 import { version } from 'better-auth';
 

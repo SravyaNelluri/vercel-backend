@@ -1,5 +1,5 @@
 import express from 'express';
-import openai from '../configs/openai.js';
+import openai from '../configs/openai';
 
 const router = express.Router();
 
@@ -43,4 +43,4 @@ router.post('/generate', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;

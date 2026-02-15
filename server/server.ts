@@ -1,11 +1,11 @@
 import express, { Request, Response } from 'express';
 import 'dotenv/config';
 import cors from 'cors';    
-import { getAuth } from './lib/auth.js';
-import userRouter from './routes/userRouters.js';
-import projectRouter from './routes/projectRoutes.js';
-import testRouter from './routes/testRoutes.js';
-import { stripeWebhook } from './controllers/stripeWebhook.js';
+import { getAuth } from './lib/auth';
+import userRouter from './routes/userRouters';
+import projectRouter from './routes/projectRoutes';
+import testRouter from './routes/testRoutes';
+import { stripeWebhook } from './controllers/stripeWebhook';
 
 // Validate critical environment variables
 const requiredEnvVars = ['DATABASE_URL', 'BETTER_AUTH_SECRET', 'BETTER_AUTH_URL'];
@@ -85,5 +85,5 @@ if (process.env.NODE_ENV !== 'production') {
     });
 }
 
-// Export for Vercel
-export default app;
+// Export for Vercel (CommonJS)
+module.exports = app;
